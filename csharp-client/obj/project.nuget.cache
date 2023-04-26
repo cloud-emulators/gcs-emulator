@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "6SMxKb6FboyFwr9MIGDCaa6SSzzOf6OfUNzAJcaPB7yBdcacg0osPn2ZgoITLP/aHm9AhgvvNab2Hq6AZ3Aclw==",
+  "success": true,
+  "projectFilePath": "/home/mahmoud/git/gcs-emulator/csharp-client/csharp-client.csproj",
+  "expectedPackageFiles": [
+    "/home/mahmoud/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.api.gax/4.3.1/google.api.gax.4.3.1.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.api.gax.rest/4.3.1/google.api.gax.rest.4.3.1.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.apis/1.60.0/google.apis.1.60.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.apis.auth/1.60.0/google.apis.auth.1.60.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.apis.core/1.60.0/google.apis.core.1.60.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.apis.storage.v1/1.60.0.2742/google.apis.storage.v1.1.60.0.2742.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/google.cloud.storage.v1/4.5.0/google.cloud.storage.v1.4.5.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.codecoverage/17.5.0/microsoft.codecoverage.17.5.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.net.test.sdk/17.5.0/microsoft.net.test.sdk.17.5.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.testplatform.objectmodel/17.5.0/microsoft.testplatform.objectmodel.17.5.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/microsoft.testplatform.testhost/17.5.0/microsoft.testplatform.testhost.17.5.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/nuget.frameworks/5.11.0/nuget.frameworks.5.11.0.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/nunit.analyzers/3.6.1/nunit.analyzers.3.6.1.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/nunit3testadapter/4.4.2/nunit3testadapter.4.4.2.nupkg.sha512",
+    "/home/mahmoud/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

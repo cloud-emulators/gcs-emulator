@@ -1,0 +1,1 @@
+{"version":1,"defects":{"TestBucket::testCanBeCreatedFromValidEmail":5,"TestBucket::testCannotBeCreatedFromInvalidEmail":5},"times":{"TestBucket::testCanBeCreatedFromValidEmail":0,"TestBucket::testCannotBeCreatedFromInvalidEmail":0}}

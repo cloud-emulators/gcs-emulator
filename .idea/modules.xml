@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cpp-client/cpp-client.iml" filepath="$PROJECT_DIR$/cpp-client/cpp-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/csharp-client/csharp-client.iml" filepath="$PROJECT_DIR$/csharp-client/csharp-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/go-client/go-client.iml" filepath="$PROJECT_DIR$/go-client/go-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node-client/node-client.iml" filepath="$PROJECT_DIR$/node-client/node-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/php-client/php-client.iml" filepath="$PROJECT_DIR$/php-client/php-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/python-client/python-client.iml" filepath="$PROJECT_DIR$/python-client/python-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ruby-client/ruby-client.iml" filepath="$PROJECT_DIR$/ruby-client/ruby-client.iml" />
+    </modules>
+  </component>
+</project>

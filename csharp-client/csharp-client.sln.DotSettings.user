@@ -1,0 +1,40 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0928b80c_002D8e95_002D444a_002Da147_002D232d07a919a0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestCreateListBucket #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=311c18cb_002D7483_002D40d6_002Da8e7_002D4b40f4b795b4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestCreateListBucket" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c1f7f88_002D39aa_002D416a_002D935c_002D2775e806ee11/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestCreateListBucket #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=49a1c429_002Dc465_002D454b_002D8edf_002Dc8a9005ba020/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestCreateListBucket #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=924c66bf_002Dad79_002D49f1_002Dacd7_002Dbdebad5aaa3f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestCreateListBucket #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aaa83128_002D49d9_002D4325_002Dbeab_002Da07b72cee6a4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestCreateListBucket #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::362795C6-17E6-4455-AB91-F8F3AE6F34CB::net7.0::csharp_client.Tests.TestCreateListBucket(8080)&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/EnvironmentVariablesIndexed/=RESHARPER_005FHOST/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/EnvironmentVariablesIndexed/=RESHARPER_005FHOST_005FVERSION/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/EnvironmentVariablesIndexed/=GOOGLE_005FAPPLICATION_005FCREDENTIALS/@EntryIndexedValue">/home/mahmoud/Downloads/idyllic-slice-381317-a297e518aa08.json</s:String></wpf:ResourceDictionary>

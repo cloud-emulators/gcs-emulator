@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gcs-emulator.gcs-emulator" target="11" />
+      <module name="gcs-emulator.gcs-emulator.main" target="11" />
+      <module name="gcs-emulator.gcs-emulator.test" target="11" />
+      <module name="gcs-emulator_main" target="11" />
+      <module name="gcs-emulator_test" target="11" />
+      <module name="io.github.mahmoudbahaa-gcs-emulator" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
