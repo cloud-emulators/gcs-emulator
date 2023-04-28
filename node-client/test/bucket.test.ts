@@ -30,7 +30,7 @@ const assert = require("assert");
 
 describe('test bucket Operations', function () {
     const storage = new Storage({
-        apiEndpoint: "http://localhost:8080/",
+        apiEndpoint: "http://127.0.0.1:8080/",
         projectId: "test-project",
     });
     const BUCKET1 = new Bucket(storage, "bucket1");
