@@ -9,14 +9,15 @@ import io.github.cloudemulators.gcsemulator.store.helper.FileStoreConfig;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Starter {
     private static final ExecutorService executorService = Executors.newFixedThreadPool(3);
-    private static final List<GCSServer> servers = new ArrayList<>();
-    private static CountDownLatch countDownLatch = new CountDownLatch(3);
+    private static final List<GCSServer> servers = new CopyOnWriteArrayList<>();
+    private static final CountDownLatch countDownLatch = new CountDownLatch(3);
 
     public static void main(String[] args) throws IOException, InterruptedException {
         executorService.submit(() -> {
