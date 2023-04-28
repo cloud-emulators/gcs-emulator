@@ -46,4 +46,14 @@
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v2.4.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrick (v1.8.1, rbenv: 3.2.2) [gem]" level="application" />
   </component>
+  <component name="RakeTasksCache">
+    <option name="myRootTask">
+      <RakeTaskImpl id="rake">
+        <subtasks>
+          <RakeTaskImpl description="Run tests" fullCommand="default" id="default" />
+          <RakeTaskImpl description="Run tests" fullCommand="test" id="test" />
+        </subtasks>
+      </RakeTaskImpl>
+    </option>
+  </component>
 </module>
