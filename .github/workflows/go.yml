@@ -26,4 +26,8 @@ jobs:
         go-version: 1.19
 
     - name: Test
-      run: go test -v ./...
+      run: |
+        ../gcs-emulator/gradlew --project-dir ../gcs-emulator startServer &
+        ../gcs-emulator/gradlew --project-dir ../gcs-emulator checkServer
+        go test -v ./...
+        ../gcs-emulator/gradlew --project-dir ../gcs-emulator stopServer
