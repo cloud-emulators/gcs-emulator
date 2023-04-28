@@ -17,7 +17,7 @@
 #  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 #  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 #  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-#  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.pip
 
 #
 #  Permission is hereby granted, free of charge, to any person obtaining
@@ -31,6 +31,7 @@
 #
 import http.client
 
+from google.auth.credentials import AnonymousCredentials
 import pytest
 from google.cloud import storage
 from google.cloud.exceptions import *
@@ -42,7 +43,9 @@ INVALID_BUCKET_NAME = "a****bucket****a"
 
 @pytest.fixture
 def storage_client():
-    storage_client = storage.Client(client_options={"api_endpoint": "http://localhost:8080"})
+    storage_client = storage.Client(project="test-project",
+                                    credentials=AnonymousCredentials(),
+                                    client_options={"api_endpoint": "http://localhost:8080"})
     bucket: storage.Bucket = storage_client.bucket(BUCKET1)
     try:
         bucket.delete()
