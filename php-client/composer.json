@@ -1,9 +1,21 @@
 {
+  "name": "gcsemulator/php-client",
+  "description": "PHP test client for google cloud emulator",
   "license": "MIT",
-  "require-dev": {
-    "google/cloud-storage": "^1.30"
-  },
   "require": {
-    "phpunit/phpunit": "^10.1"
+    "php" : "8.1.*",
+    "phpunit/phpunit": "^10.1.2",
+    "google/cloud": "@stable"
+  },
+  "scripts": {
+    "test": [
+      "@runserver",
+      "@checkServer",
+      "phpunit *Test.php",
+      "@stopServer"
+    ],
+    "runserver": "../gcs-emulator/gradlew --project-dir ../gcs-emulator startServer &",
+    "checkServer": "../gcs-emulator/gradlew --project-dir ../gcs-emulator checkServer",
+    "stopServer": "../gcs-emulator/gradlew --project-dir ../gcs-emulator stopServer"
   }
 }

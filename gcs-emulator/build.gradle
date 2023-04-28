@@ -50,3 +50,24 @@ test {
 
     maxParallelForks 1
 }
+
+tasks.register('startServer', JavaExec) {
+    group = "LifeCycle"
+    description = "Start the servers"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github.cloudemulators.gcsemulator.lifecycle.Starter'
+}
+
+tasks.register('checkServer', JavaExec) {
+    group = "LifeCycle"
+    description = "Check if the servers is running blocking till it does"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github.cloudemulators.gcsemulator.lifecycle.Checker'
+}
+
+tasks.register('stopServer', JavaExec) {
+    group = "LifeCycle"
+    description = "Stop the servers"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github.cloudemulators.gcsemulator.lifecycle.Stopper'
+}
