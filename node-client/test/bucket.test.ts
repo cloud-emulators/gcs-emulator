@@ -30,16 +30,17 @@ const assert = require("assert");
 
 describe('test bucket Operations', function () {
     const storage = new Storage({
-        apiEndpoint: "http://localhost:8080/"
+        apiEndpoint: "http://localhost:8080/",
+        projectId: "test-project",
     });
     const BUCKET1 = new Bucket(storage, "bucket1");
     const INVALID_BUCKET_NAME = "***bucket***";
     // const BUCKET2 = new Bucket(storage, "bucket2");
 
 
-    beforeEach(function () {
+    beforeEach(async function () {
         try {
-            BUCKET1.delete();
+            await BUCKET1.delete();
         } catch (err) { /**/
         }
     })
@@ -54,7 +55,7 @@ describe('test bucket Operations', function () {
         let [bucket] = await storage.createBucket(BUCKET1.name);
         assert.ok(bucket);
 
-        let error: ApiError;
+        let error: ApiError | undefined = undefined;
         try {
             await storage.createBucket(BUCKET1.name);
         } catch (err) {
@@ -67,7 +68,7 @@ describe('test bucket Operations', function () {
     });
 
     it('should not create a bucket with invalid name', async function () {
-        let error: ApiError;
+        let error: ApiError | undefined = undefined;
         try {
             await storage.createBucket(INVALID_BUCKET_NAME);
         } catch (err) {
