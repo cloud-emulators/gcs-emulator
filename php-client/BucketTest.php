@@ -34,11 +34,12 @@ final class BucketTest extends TestCase
     private Bucket $bucket1;
     private Bucket $bucket2;
     private const INVALID_BUCKET_NAME = "***Bucket****";
+    private const PROJECT_ID = "test-project";
 
     public function __construct($name)
     {
         parent::__construct($name);
-        $this->storage = new StorageClient(['apiEndpoint' => "http://localhost:8080"]);
+        $this->storage = new StorageClient(['apiEndpoint' => "http://localhost:8080", 'projectId' => self::PROJECT_ID]);
         $this->bucket1 = $this->storage->bucket("bucket1");
         $this->bucket2 = $this->storage->bucket("bucket2");
     }
