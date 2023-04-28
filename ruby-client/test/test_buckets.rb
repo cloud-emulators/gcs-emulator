@@ -28,16 +28,22 @@ require 'google/cloud/errors'
 
 # Testing Buckets
 class TestBuckets < Minitest::Test
-  BUCKET1 = "bucket1"
-  BUCKET2 = "bucket2"
-  INVALID_BUCKET_NAME = "a****bucket****a"
+  BUCKET1 = 'bucket1'
+  BUCKET2 = 'bucket2'
+  INVALID_BUCKET_NAME = 'a****bucket****a'
+  PRIVATE_KEY = OpenSSL::PKey::RSA.generate(2048, 65_537)
 
   def setup
-    @storage = Google::Cloud::Storage.new endpoint: "http://localhost:8080/"
+    options = {}
+    options[:token_credential_uri] = 'http://localhost:8080/token'
+    options[:audience] = 'http://localhost:8080/token'
+    options[:private_key] = PRIVATE_KEY
+    credentials = Google::Cloud::Storage::Credentials.new(options)
+    @storage = Google::Cloud::Storage.new(endpoint: 'http://localhost:8080/',
+                                          project_id: 'project-id',
+                                          credentials:)
     bucket1 = @storage.bucket(BUCKET1)
-    if bucket1 != nil
-      bucket1.delete
-    end
+    bucket1&.delete
   end
 
   def test_bucket_created
@@ -46,12 +52,10 @@ class TestBuckets < Minitest::Test
   end
 
   def test_bucket_invalid_name
-    begin
-      @storage.create_bucket INVALID_BUCKET_NAME
-    rescue Google::Cloud::Error => e
-      assert e.instance_of? Google::Cloud::InvalidArgumentError
-      assert e.message.include? "Invalid bucket name"
-    end
+    @storage.create_bucket INVALID_BUCKET_NAME
+  rescue Google::Cloud::Error => e
+    assert e.instance_of? Google::Cloud::InvalidArgumentError
+    assert e.message.include? 'Invalid bucket name'
   end
 
   def test_bucket_already_exists
@@ -61,8 +65,8 @@ class TestBuckets < Minitest::Test
       @storage.create_bucket BUCKET1
     rescue Google::Cloud::Error => e
       assert e.instance_of? Google::Cloud::AlreadyExistsError
-      assert_equal "conflict: Your previous request to create the named bucket succeeded and you already own it.", e.message
+      assert_equal 'conflict: Your previous request to create the named bucket succeeded and you already own it.',
+                   e.message
     end
   end
-
 end
