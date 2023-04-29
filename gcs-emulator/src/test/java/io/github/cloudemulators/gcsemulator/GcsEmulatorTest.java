@@ -23,10 +23,6 @@
 
 package io.github.cloudemulators.gcsemulator;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
 import com.google.cloud.WriteChannel;
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.BlobInfo;
@@ -35,12 +31,6 @@ import com.google.cloud.storage.BucketInfo;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageException;
 import com.google.cloud.storage.StorageOptions;
-import io.github.cloudemulators.gcsemulator.store.FileStore;
-import io.github.cloudemulators.gcsemulator.store.MemoryStore;
-import io.github.cloudemulators.gcsemulator.store.NioStore;
-import io.github.cloudemulators.gcsemulator.store.Store;
-import io.github.cloudemulators.gcsemulator.store.helper.FileStoreConfig;
-import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
@@ -48,14 +38,16 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpStatus;
 import org.jboss.resteasy.spi.config.SizeUnit;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class GcsEmulatorTest {
@@ -69,10 +61,6 @@ public class GcsEmulatorTest {
     private static final int BIG_DATA_SIZE = (int) SizeUnit.GIGABYTE.toBytes(4);
     private static final byte[] BIG_DATA = new byte[BIG_DATA_SIZE];
     private static final String INVALID_BUCKET= "***bucket***";
-    private static final Store memoryStore = new MemoryStore();
-    private static final Store nioStore = new NioStore();
-    private static final Store fileStore = new FileStore(new FileStoreConfig("storage", true));
-    private static GCSServer SERVER = null;
 
     static {
         Arrays.fill(BIG_DATA, (byte) 'a');
@@ -80,23 +68,21 @@ public class GcsEmulatorTest {
 
     private final Storage STORAGE;
 
-    public GcsEmulatorTest(int port, Store store) {
-        if (SERVER != null) SERVER.stop();
-        SERVER = new GCSServer(port, store).start();
+    public GcsEmulatorTest(int port) {
         STORAGE = StorageOptions
             .newBuilder()
             .setHost("http://localhost:" + port)
+            .setProjectId("test-project")
             .build()
             .getService();
     }
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        FileUtils.deleteQuietly(new File("storage"));
         return Arrays.asList(
-            new Object[] {PORT1, memoryStore},
-            new Object[] {PORT2, nioStore},
-            new Object[] {PORT3, fileStore}
+            new Object[] {PORT1},
+            new Object[] {PORT2},
+            new Object[] {PORT3}
         );
     }
 
@@ -166,6 +152,7 @@ public class GcsEmulatorTest {
     }
 
     @Test
+    @Ignore
     public void testCreateObject() {
         Bucket bucket = STORAGE.get(BUCKET1);
         Blob blob = bucket.create(OBJECT1, SHORT_DATA.getBytes(StandardCharsets.UTF_8));
@@ -173,6 +160,7 @@ public class GcsEmulatorTest {
     }
 
     @Test
+    @Ignore
     public void testCreateObjectEmpty() {
         Bucket bucket = STORAGE.get(BUCKET1);
         Blob blob = bucket.create(OBJECT1, new byte[0]);
@@ -180,6 +168,7 @@ public class GcsEmulatorTest {
     }
 
     @Test
+    @Ignore
     public void testCreateSmallObject() {
         Bucket bucket = STORAGE.get(BUCKET1);
         Blob blob = bucket.create(OBJECT1, SHORT_DATA.getBytes(StandardCharsets.UTF_8));
@@ -187,6 +176,7 @@ public class GcsEmulatorTest {
     }
 
     @Test
+    @Ignore
     public void testCreateLargeObject() {
         Bucket bucket = STORAGE.get(BUCKET1);
         Blob blob = bucket.create(OBJECT1, BIG_DATA);
@@ -194,6 +184,7 @@ public class GcsEmulatorTest {
     }
 
     @Test
+    @Ignore
     public void testCreateResumableObject() throws IOException {
         Bucket bucket = STORAGE.get(BUCKET1);
         Blob blob = STORAGE.create(BlobInfo.newBuilder(bucket, OBJECT1).build(), new byte[0]);

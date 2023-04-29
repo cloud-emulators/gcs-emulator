@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "com.github.psxpaul.execfork" version "0.2.2"
 }
 
 java {
@@ -51,6 +52,16 @@ test {
     maxParallelForks 1
 }
 
+tasks.register('startServerInternal', com.github.psxpaul.task.JavaExecFork) {
+    dependsOn(jar)
+    dependsOn(compileTestJava)
+    group = "LifeCycle"
+    description = "Start the servers"
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'io.github.cloudemulators.gcsemulator.lifecycle.Starter'
+    waitForPort = 8080
+}
+
 tasks.register('startServer', JavaExec) {
     group = "LifeCycle"
     description = "Start the servers"
@@ -71,3 +82,5 @@ tasks.register('stopServer', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'io.github.cloudemulators.gcsemulator.lifecycle.Stopper'
 }
+
+test.dependsOn(startServerInternal)
